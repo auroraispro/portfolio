@@ -2,14 +2,15 @@
 import astroLogo from "../assets/astro.svg";
 import background from "../assets/background.svg";
 import Navigation from "./Navigation.astro";
+import Global from "../styles/global.css";
 ---
 
 <div id="container">
   <img id="background" src={background.src} alt="" fetchpriority="high" />
   <main>
     <section id="hero">
-      <h1>About Me</h1>
-      <p>
+      <h1 class="text-4xl text-center">About Me</h1>
+      <p class="text-lg indent-16">
         Growing up in Roswell, Georgia, a suburb north of Atlanta... I have
         always been fascinated with technology and its ability to deliver
         interesting experiences. I graduated from Georgia State University with
@@ -22,6 +23,17 @@ import Navigation from "./Navigation.astro";
         to cover. I got into programming out of a desire to build things, and
         show them to people. Even though I enjoyed code, I was never able to
         fully ignite that spark until recently.
+      </p>
+      <p class="text-lg indent-16">
+        I was fortunate enough to be hired on as an intern at zPaper, and they enabled
+        me to actually explore the idea of delivering a real, usable program. I was put
+        to work designing a new Dashboard for viewing important telephony data, and was
+        given freedom and guidance to build the thing how I thought would be best. The 
+        idea that I had was to maximize the number of interesting ideas I would experiment
+        with. Basically, I would not only be building a program, but also testing new 
+        and promising ways of doing things. That's what really struck me. So I chose interesting
+        technologies and focused on making the simplest and most maintainable code I could. When 
+        in doubt, I made it even simpler.
       </p>
     </section>
   </main>
@@ -65,15 +77,9 @@ import Navigation from "./Navigation.astro";
 
   #hero {
     display: flex;
-    align-items: start;
     flex-direction: column;
     justify-content: center;
     padding: 16px;
-  }
-
-  h1 {
-    font-size: 22px;
-    margin-top: 0.25em;
   }
 
   #links {
@@ -129,14 +135,6 @@ import Navigation from "./Navigation.astro";
     font-weight: normal;
     color: #111827;
     font-size: 20px;
-  }
-
-  p {
-    color: #4b5563;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.006em;
-    margin: 0;
   }
 
   code {
